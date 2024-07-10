@@ -12,7 +12,7 @@
     "versioning": "npm version patch",
     "build": "tsc",
     "test": "tsc && jest",
-    "prod": "npm publish"
+    "prod": "rm -rf ./dist && tsc && npm publish"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
