@@ -1,6 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 18",
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
@@ -9,8 +8,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./ts"
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["ts/src/**/*.ts"],
+  "exclude": ["node_modules", "ts/test", "dist"]
 }
