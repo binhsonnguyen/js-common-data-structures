@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "",
   "repository": "https://github.com/binhsonnguyen/js-common-data-structures.git",
-  "main": "dist/index.js",
   "files": [
     "dist"
   ],
