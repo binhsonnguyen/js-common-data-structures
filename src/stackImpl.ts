@@ -57,5 +57,4 @@ class StackItem<T> {
   get item (): Maybe<T> {
     return this._item
   }
-
 }

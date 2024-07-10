@@ -1,12 +1,11 @@
 import { Maybe } from './maybe'
 
 export interface Stack<T> {
-  peek: Maybe<T>;
+  peek: Maybe<T>
 
-  push (item: Maybe<T>): void;
+  push: (item: Maybe<T>) => void
 
-  pop (): Maybe<T>;
+  pop: () => Maybe<T>
 
-  empty (): boolean;
+  empty: () => boolean
 }
-

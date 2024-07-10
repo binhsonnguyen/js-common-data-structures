@@ -1,33 +1,32 @@
 import { expect, test } from '@jest/globals'
 import { StackImpl } from '../src/stackImpl'
 import { Stack } from '../src/stack'
-import { EmptyStackError } from '../src/emptyStackException'
 
 test('test create stack', () => {
-  const stack: Stack<any> = new StackImpl<any>
+  const stack: Stack<any> = new StackImpl<any>()
   expect(stack.empty()).toBeTruthy()
 })
 
 test('test push items to stack', () => {
-  let stack: Stack<any> = new StackImpl<any>
+  let stack: Stack<any> = new StackImpl<any>()
   stack.push(0)
   expect(stack.empty()).toBeFalsy()
 
-  stack = new StackImpl<any>
+  stack = new StackImpl<any>()
   stack.push('hello')
   expect(stack.empty()).toBeFalsy()
 
-  stack = new StackImpl<any>
+  stack = new StackImpl<any>()
   stack.push(false)
   expect(stack.empty()).toBeFalsy()
 
-  stack = new StackImpl<any>
+  stack = new StackImpl<any>()
   stack.push(null)
   expect(stack.empty()).toBeFalsy()
 })
 
 test('test view stack peak', () => {
-  const stack: Stack<any> = new StackImpl<any>
+  const stack: Stack<any> = new StackImpl<any>()
   stack.push(0)
   expect(stack.peek).toBe(0)
   stack.push('hello')
@@ -41,7 +40,7 @@ test('test view stack peak', () => {
 })
 
 test('test pop out stack item', () => {
-  const stack: Stack<any> = new StackImpl<any>
+  const stack: Stack<any> = new StackImpl<any>()
   stack.push(0)
   stack.push('hello')
   stack.push(false)
@@ -57,5 +56,4 @@ test('test pop out stack item', () => {
   // The function that throws an exception needs to be invoked within a wrapping
   // function otherwise the toThrow assertion will fail.
   expect(() => stack.pop()).toThrow('EmptyStackError')
-
 })

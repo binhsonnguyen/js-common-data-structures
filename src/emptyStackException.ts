@@ -1,6 +1,6 @@
 export class EmptyStackError extends Error {
   constructor (message?: string) {
-    super('EmptyStackError: ' + message)
+    super(`EmptyStackError:  ${message ?? ''}`)
     this.name = 'EmptyStackError'
   }
 }
