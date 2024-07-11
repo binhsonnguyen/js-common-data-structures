@@ -1,32 +1,32 @@
 import { expect, test } from '@jest/globals'
-import { Stack } from '../src/stack'
-import { StackInterface } from '../src/stackInterface'
+import Stack from '../src/stack'
+import StackInterface from '../src/stackInterface'
 
 test('test create stack', () => {
-  const stack: Stack<any> = new StackImpl<any>()
+  const stack: StackInterface<any> = new Stack<any>()
   expect(stack.empty()).toBeTruthy()
 })
 
 test('test push items to stack', () => {
-  let stack: Stack<any> = new StackImpl<any>()
+  let stack: StackInterface<any> = new Stack<any>()
   stack.push(0)
   expect(stack.empty()).toBeFalsy()
 
-  stack = new StackImpl<any>()
+  stack = new Stack<any>()
   stack.push('hello')
   expect(stack.empty()).toBeFalsy()
 
-  stack = new StackImpl<any>()
+  stack = new Stack<any>()
   stack.push(false)
   expect(stack.empty()).toBeFalsy()
 
-  stack = new StackImpl<any>()
+  stack = new Stack<any>()
   stack.push(null)
   expect(stack.empty()).toBeFalsy()
 })
 
 test('test view stack peak', () => {
-  const stack: Stack<any> = new StackImpl<any>()
+  const stack: StackInterface<any> = new Stack<any>()
   stack.push(0)
   expect(stack.peek).toBe(0)
   stack.push('hello')
@@ -40,7 +40,7 @@ test('test view stack peak', () => {
 })
 
 test('test pop out stack item', () => {
-  const stack: Stack<any> = new StackImpl<any>()
+  const stack: StackInterface<any> = new Stack<any>()
   stack.push(0)
   stack.push('hello')
   stack.push(false)
