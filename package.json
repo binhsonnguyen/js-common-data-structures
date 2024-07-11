@@ -1,5 +1,5 @@
 {
-  "name": "js-common-data-structures",
+  "name": "@nguyenbinhson/js-common-data-structures",
   "version": "0.0.4",
   "description": "",
   "repository": "https://github.com/binhsonnguyen/js-common-data-structures.git",
@@ -10,8 +10,8 @@
     "versioning": "npm version patch",
     "clean": "rm -rf dist",
     "build": "babel src --out-dir dist/src --extensions '.ts' && tsc",
-    "test": "tsc && jest",
-    "prod": "rm -rf ./dist && tsc && npm publish"
+    "test": "jest",
+    "prod": "npm run clean && npm run build && npm publish"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
