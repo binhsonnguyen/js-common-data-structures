@@ -1,1 +1,2 @@
-export type None = null | undefined
+type None = null | undefined
+export type { None as default }

@@ -1,3 +1,4 @@
-import { None } from './none'
+import None from './none'
 
-export type Maybe<T> = T | None;
+type Maybe<T> = T | None;
+export type { Maybe as default }

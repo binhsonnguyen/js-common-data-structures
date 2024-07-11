@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals'
-import { StackImpl } from '../src/stackImpl'
 import { Stack } from '../src/stack'
+import { StackInterface } from '../src/stackInterface'
 
 test('test create stack', () => {
   const stack: Stack<any> = new StackImpl<any>()
