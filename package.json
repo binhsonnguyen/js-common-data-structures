@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "versioning": "npm version patch",
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "babel src --out-dir dist/src --extensions '.ts' && tsc",
     "test": "tsc && jest",
     "prod": "rm -rf ./dist && tsc && npm publish"
   },
